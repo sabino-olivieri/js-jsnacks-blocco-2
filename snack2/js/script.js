@@ -15,7 +15,7 @@ if(wordSameLength(word1, word2)) {
 
     strMessage = "Hanno la stessa lunghezza " + word1 + " " + word2;
 
-} else if (word1IsMoreLonger(word1, word2)) {
+} else if (firstWordIsMoreLonger(word1, word2)) {
 
     strMessage +=  word1;
 

@@ -1,23 +1,23 @@
 /**
  * Description controllo se 2 parole hanno la stessa lunghezza
- * @param {string} word1 prima parola
- * @param {string} word2 seconda parola
+ * @param {string} firstWord prima parola
+ * @param {string} secondWord seconda parola
  * @returns {boolean} vero se hanno la stessa lunghezza
  */
-function wordSameLength(word1, word2) {
+function wordSameLength(firstWord, secondWord) {
     
-    return word1.length === word2.length
+    return firstWord.length === secondWord.length
         
 
 }
 
 /**
  * Description controllo se parola 1 è più lungha
- * @param {string} word1 prima parola
- * @param {string} word2 seconda parola
+ * @param {string} firstWord prima parola
+ * @param {string} secondWord seconda parola
  * @returns {boolean}
  */
-function word1IsMoreLonger (word1, word2) {
+function firstWordIsMoreLonger (firstWord, secondWord) {
 
-    return word1.length > word2.length
+    return firstWord.length > secondWord.length
 }
