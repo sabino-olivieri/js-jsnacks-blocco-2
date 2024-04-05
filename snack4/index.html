@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conta elementi</title>
+    <title>Trova indice</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -13,14 +13,19 @@
     <div class="container flex">
         <form action="" class="flex">
             <div>
-                <label for="string-element">Inserisci qualcosa nella lista:</label>
+                <label for="">Inserisci qualcosa nella lista:</label>
                 <input type="text" id="string-element" placeholder="Scrivi qualcosa">
+                <button type="submit" id="add-btn">Inserisci</button>
             </div>
 
             <div>
-                <button type="submit" id="add-btn">Inserisci</button>
+                <label for="search-element">Inserici un elemento da cercare:</label>
+                <input type="text" id="search-element" placeholder="Cerca qualcosa"> 
+                <button id="find-btn">Trova Indice</button>
+            </div>
+
+            <div>
                 <button id="cancel-btn">Cancella</button>
-                <button id="control-btn">Controlla</button>
             </div>
         </form>
 
