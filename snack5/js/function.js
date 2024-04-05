@@ -8,6 +8,11 @@ function printInPage(elementToPrint, elementWherePrint) {
     elementWherePrint.innerHTML += `<li>${elementToPrint}</li>`;
 }
 
+/**
+ * Description stampo elementi di un array in una stringa 
+ * @param {array} arrayToPrint array da stampare
+ * @param {object} wherePrint dove stampare
+ */
 function printStringArray (arrayToPrint, wherePrint) {
 
     let stringPrint = "";

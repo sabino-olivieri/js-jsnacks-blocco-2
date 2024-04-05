@@ -17,10 +17,10 @@ const textElem = document.getElementById("string-element");
 const searchElem = document.getElementById("search-element");
 
 // prendo elemento lista
-const listElem = document.querySelector("ul");
+const listElem = document.querySelector(".list ul");
 
-// prendo elemento result
-const resultElem = document.querySelector(".result");
+// prendo elemento result ul
+const resultElem = document.querySelector(".result ul");
 
 submitElem.addEventListener("submit", function(event) {
 
@@ -48,9 +48,15 @@ cancelElem.addEventListener("click", function () {
 printElem.addEventListener("click", function() {
     
     if (list.length !== 0) {
-    printStringArray(list, resultElem);
+    const arrayNoTail = removeFromTail(list);
+
+    for (let i = 0; i < arrayNoTail.length; i++) {
+        printInPage(arrayNoTail[i], resultElem)
+    }
+
     } else {
         alert("L'array è vuoto, inserisci qualcosa prima");
     }
+
 });
 
