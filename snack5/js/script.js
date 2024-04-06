@@ -13,9 +13,6 @@ const printElem = document.getElementById("print-btn");
 // prendo elemento input text
 const textElem = document.getElementById("string-element");
 
-// prendo elemento input da cercare
-const searchElem = document.getElementById("search-element");
-
 // prendo elemento lista
 const listElem = document.querySelector("ul");
 

@@ -13,13 +13,16 @@ const printElem = document.getElementById("print-btn");
 // prendo elemento input text
 const textElem = document.getElementById("string-element");
 
+// prendo elemento input da aggiungere
+const addElem = document.getElementById("add-element");
+
 // prendo elemento lista
 const listElem = document.querySelector(".list ul");
 
 // prendo elemento result ul
 const resultElem = document.querySelector(".result ul");
 
-submitElem.addEventListener("submit", function(event) {
+submitElem.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -42,18 +45,30 @@ cancelElem.addEventListener("click", function () {
     resultElem.innerHTML = "";
 });
 
-printElem.addEventListener("click", function() {
-    
-    if (list.length !== 0) {
-    const arrayNoHead = removeFromHead(list);
+printElem.addEventListener("click", function () {
 
-    for (let i = 0; i < arrayNoHead.length; i++) {
-        printInPage(arrayNoHead[i], resultElem)
-    }
+    const valueToAdd = addElem.value;
+
+    if (valueToAdd !== "" && valueToAdd !== " ") {
+
+        if (list.length !== 0) {
+
+
+            const newArray = insertInHead(list, valueToAdd);
+
+            for (let i = 0; i < newArray.length; i++) {
+                printInPage(newArray[i], resultElem)
+            }
+
+        } else {
+            alert("L'array è vuoto, inserisci qualcosa prima");
+        }
 
     } else {
-        alert("L'array è vuoto, inserisci qualcosa prima");
+        alert("Inserisci qualcosa da aggiungere in testa alla lista");
     }
+
+    addElem.value = "";
 
 });
 
